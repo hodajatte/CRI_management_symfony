@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}societe{% endblock %}
+
+{% block body %}
+
+
+    <div class="container"  style="margin-top: 200px; margin-bottom: 100px;">
+    
+        {% if societe %}
+            <div class="row">
+                <div class="col-3"></div>
+
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-8">
+                            <h4>raison_sociale</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.raisonSociale}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>source</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.source}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>forme_juridique</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.formeJuridique}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>secteur_activite</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.secteurActivite}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>sous_secteur_activite</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.sousSecteurActivite}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>produit</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.produit}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>offre_service</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.offreService}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>date_creation</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.dateCreation|date('Y-m-d')}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>gsm</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.gsm}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>email</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.email}}</p>
+                        </div>
+                        <div class="col-8">
+                            <h4>site_internet</h4>
+                        </div>
+                        <div class="col-4">
+                            <p>{{societe.siteInternet}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3"></div>
+            </div>
+        {% else %}
+            <h3 class="text-center" style="margin-bottom: 300px;">Societe introuvable !!!!</h3>
+        {% endif %}
+        
+        <a href="{{ path('societes' )}}" class="btn btn-primary">Retour</a>
+        <a href="{{ path('societe_edit', {'id':societe.id} )}}" class="btn btn-warning">Modifier</a>
+        <a href="{{ path('societe_delete', {'id':societe.id} )}}" class="btn btn-danger">Supprimer</a>
+
+    </div>
+
+
+
+
+{% endblock %}

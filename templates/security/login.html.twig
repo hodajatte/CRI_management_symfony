@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row" style="margin-top: 250px; margin-bottom: 100px;">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Authentification</div>
+
+                <div class="card-body">
+                    <form action="{{path('user_login')}}" method="post">
+                        {% if error %}    
+                            <div class="text-danger">
+                                Username or password incorrect
+                            </div>
+                        {%  endif %}
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="_username">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="_password">
+                            <div class="password-icon">
+                                <i data-feather="eye"></i>
+                                <i data-feather="eye-off"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Valider</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://unpkg.com/feather-icons"></script>
+{% endblock %}

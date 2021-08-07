@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des societes{% endblock %}
+
+{% block body %}
+
+
+    <div class="container"  style="margin-top: 150px; margin-bottom: 100px;">
+    
+        <div class="card">
+            <div class="card-header">Liste des societes</div>
+            <div class="card-body">
+                
+                <a href="{{ path('societe_add') }}" class="btn btn-primary">Ajouter une société</a>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">raison_sociale</th>
+                            <th scope="col">forme_juridique</th>
+                            <th scope="col">date_creation</th>
+                            <th scope="col">gsm</th>
+                            <th scope="col">email</th>
+                            <th scope="col">site_internet</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in societes %}
+                            <tr>
+                                <td>{{ s.raisonSociale }}</td>
+                                <td>{{ s.formeJuridique }}</td>
+                                <td>{{ s.dateCreation|date('Y-m-d') }}</td>
+                                <td>{{ s.gsm }}</td>
+                                <td>{{ s.email }}</td>
+                                <td>{{ s.siteInternet }}</td>
+                                <td>
+                                    <a href="{{ path('societe_show', {'id':s.id}) }}" class="text-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('societe_edit', {'id':s.id} )}}" class="text-warning"><i class="fa fa-eraser" aria-hidden="true"></i></a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('societe_delete', {'id':s.id} )}}" class="text-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                    
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

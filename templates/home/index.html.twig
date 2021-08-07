@@ -1,0 +1,207 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+          }
+          .jumbotron-odi-hero{
+          padding: 0rem 0rem;
+           position: relative;
+           max-width: 100%;
+           
+          }
+          .jumbotron-odi-dark{
+           max-width: 100%;
+           padding: 0px;
+           
+          }
+          
+          .jumbotron-overlay {
+           height:100%;
+           padding: 100px 0;
+           color:#fff;
+           
+          }
+          .jumbotron-padding{
+           padding-top: 6rem;
+           
+          }
+          
+          .btn-circle {
+             border-radius: 30px;
+          }
+          
+          .latest-news {
+           border-bottom: .25rem solid transparent;
+           border-bottom-color: #007bff;
+          }
+    </style>
+
+
+    <!-- Masthead-->
+    <header class="masthead  text-white text-center" style="background: #CA150A;">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img src="/assets/img/logo-banner.jpg" height="300" width="300" class="mb-5" style="border-radius: 150px;">
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Centre Régional d'Investissement</h1>
+            DAKHLA OUED EDDAHAB</br>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container mt-5" id="about">
+        <h1 class="text-center py-4">Nos avantages</h1>
+       
+       <div class="row text-center mt-5">
+        <div class="col-md-3">
+         <div class="card shadow">
+           <div class="card-body">
+           <div class="py-3 text-center"> <i class="fas fa-rocket card-img-top fa-4x text-danger" aria-hidden="true"></i></div>
+           <div class="card-body">
+             <h4 class="card-title">Ready to ship</h4>
+             <p class="card-text">You can use this theme as personal as well as for commercial purpose & can customise it. </p>
+            </div>
+           </div>
+         </div>
+         </div>
+           <div class="col-md-3">
+          <div class="card shadow">
+           <div class="card-body">
+            <div class="py-3 text-center"><i class="fas fa-feather card-img-top fa-4x text-danger" aria-hidden="true"></i></div>
+           <div class="card-body">
+             <h4 class="card-title">Light weight</h4>
+             <p class="card-text">We avoid needless js and CSS which makes template more sleek and powerful. </p>
+            </div>
+           </div>
+         </div>
+         </div>
+           <div class="col-md-3">
+          <div class="card shadow">
+           <div class="card-body">
+           <div class="py-3 text-center"><i class="fa fa-tablet card-img-top fa-4x text-danger" aria-hidden="true"></i></div>
+          
+           <div class="card-body">
+             <h4 class="card-title">Responsive </h4>
+             <p class="card-text">Our templates works in all devices (desktop,tablets and phones). </p>
+             </div>
+           </div>
+         </div>
+         </div>
+
+                  
+         <div class="col-md-3">
+          <div class="card shadow">
+           <div class="card-body">
+           <div class="py-3 text-center"><i class="fas fa-charging-station card-img-top fa-4x text-danger" aria-hidden="true"></i>
+          </div>
+           <div class="card-body">
+             <h4 class="card-title">Easy customisation</h4>
+             <p class="card-text">Our templates are clean,light weight and technically refined. </p>
+             </div>
+           </div>
+
+         </div>
+         </div>
+        
+       </div>
+     </div>
+   <div class="container mt-5  text-center">
+      <p class="pt-5 pb-2 h4 text-monospace">A propos</p>
+     <div class="row">
+      
+       <div class="mx-auto" style="width: 800px;">
+         <p class="text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       </div>
+
+     </div>
+   </div>
+  
+<!-- features start -->
+  <div class="container mt-5 ">
+        <p class="py-4 h3 text-center">Nos collaborateurs</p>
+       <div class="row">
+         <div class="col-md-6">
+           <div class="card shadow">
+             <div class="card-body">
+               <div class="media">
+                 <div class="mr-4" style="height:64px;width:64px;">
+                   <i class="fa fa-rocket card-img-top fa-4x text-danger" aria-hidden="true"></i>
+                 </div>
+                 <div class="media-body">
+                   <h4 class="mt-0 tex-dark">Ready to ship</h4>
+                   <p class=" text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div class="card shadow">
+             <div class="card-body">
+               <div class="media">
+                 <div class="mr-4" style="height:64px;width:64px;">
+                   <i class="fa fa-leaf card-img-top fa-4x text-danger" aria-hidden="true"></i>
+                 </div>
+                 <div class="media-body">
+                   <h4 class="mt-0 tex-dark">Light weight</h4>
+                   <p class=" text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+         <div class="row py-4">
+         <div class="col-md-6">
+           <div class="card shadow">
+             <div class="card-body">
+               <div class="media">
+                 <div class="mr-4" style="height:64px;width:64px;">
+                   <i class="fa fa-tablet card-img-top fa-4x text-danger" aria-hidden="true"></i>
+                 </div>
+                 <div class="media-body">
+                   <h4 class="mt-0 tex-dark">Responsive</h4>
+                   <p class=" text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div class="card shadow">
+             <div class="card-body">
+               <div class="media">
+                 <div class="mr-4" style="height:64px;width:64px;">
+                   <i class="fa fa-cogs card-img-top fa-4x text-danger" aria-hidden="true"></i>
+                 </div>
+                 <div class="media-body">
+                   <h4 class="mt-0 tex-dark">Easy customisation</h4>
+                   <p class=" text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+   </div>
+   <!-- features end -->
+
+
+    
+
+
+
+{% endblock %}
